@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ejercicios Matemáticos</title>
+</head>
+<body>
+    <main>
+        <h1>Ejercicios Matemáticos Interactivos 2</h1>
+        <!-- Perímetro -->
+        <div class="card">
+            <h2>1. Teorema de Pitágoras</h2>
+            <label for="cateto1">Cateto 1:</label>
+            <input type="number" id="cateto1">
+            <label for="cateto2">Cateto 2:</label>
+            <input type="number" id="cateto2">
+            <button type="button" onclick="calculatePithagoras()">Calcular</button>
+            <p id="resultPithagoras"></p>
+        </div>
+        <!-- Conversor Celsius/Farenheit -->
+        <div class="card">
+            <h2>2. Conversión Km a Nonsense</h2>
+            <label for="km">Kilómetros:</label>
+            <input type="number" id="km" placeholder="Km">
+            <button type="button" onclick="calculateMiles()">Convertir</button>
+            <p id="resultMiles"></p>
+        </div>
+        <!-- Área triángulo -->
+        <div class="card">
+            <h2>3. Volumen cilindro</h2>
+            <label for="radioCilinder">Radio:</label>
+            <input type="number" id="radioCilinder">
+            <label for="alturaCilinder">Altura:</label>
+            <input type="number" id="alturaCilinder">
+            <button type="button" onclick="calculateVolume()">Calcular</button>
+            <p id="resultVolume"></p>
+        </div>
+        <!-- Circunferencia -->
+        <div class="card">
+            <h2>4. Índice de Masa Corporal</h2>
+            <label for="weight">Peso:</label>
+            <input type="number" id="weight" placeholder="Kg">
+            <label for="height">Altura:</label>
+            <input type="number" id="height" placeholder="Altura en metros">
+            <button type="button" onclick="calculateIMC()">Calcular</button>
+            <p id="resultIMC"></p>
+        </div>
+        <div class="card">
+            <h2>5. ¿Par o Impar?</h2>
+            <label for="number">Número:</label>
+            <input type="number" id="number" placeholder="introduzca un número">
+            <button type="button" onclick="calculateEvenOrOdd()">Calcular</button>
+            <p id="resultEvenOrOdd"></p>
+        </div>
+    </main>
+</body>
+</html>
