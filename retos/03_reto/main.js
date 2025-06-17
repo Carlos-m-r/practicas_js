@@ -1,9 +1,22 @@
-function calculateEuroDolar () {
-   const euro = Number(document.getElementById('euro').value);
-   
-   let result = Number(euro * 1.16).toFixed(2); 
-   
-   document.getElementById('resultDolars').innerText = result + "$";
+
+
+async function calculateEuroDolar() {
+    const api = "https://api.exchangerate-api.com/v4/latest/USD";
+    const euro = Number(document.getElementById('euro').value);
+
+    try {
+        const response = await fetch(api);
+        const data = await response.json();
+        const currentEUR = data.rates['EUR']; // Queremos saber cuánto vale 1 USD en EUR
+
+        // Si el usuario ingresa EUR y queremos saber cuántos USD son:
+        const result = (euro / currentEUR).toFixed(2);
+
+        document.getElementById('resultDolars').innerText = result + " $";
+    } catch (error) {
+        console.error("Error al obtener tasas de cambio:", error);
+        document.getElementById('resultDolars').innerText = "Error al convertir.";
+    }
 }
 
 
@@ -28,14 +41,16 @@ function calculateAreaTrapezium () {
 
 function calculateMultiplyTable() {
 
-    const number = Number(document.getElementById('number').value);
+    //Comprobamos si input es null para que no se acabe tomando por defecto 0
+    const input = document.getElementById('number').value;
 
-    console.log(number)
-
-    if(isNaN(number)) {
+    if(input == '') {
         return;
     }
-    
+
+    //Funcion
+    const number = Number(document.getElementById('number').value);
+ 
     let array = [];
     let tableDoc = document.createElement("table");
     
