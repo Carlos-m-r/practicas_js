@@ -15,9 +15,12 @@ function addWater() {
       if(waterValue < 2 && quantitySymbol.localeCompare('L') == 0){
          waterValue = (Number(waterValue) + 0.2).toFixed(2);
       }else {
+         document.getElementById('bucketImg').setAttribute('src','img/bucket.png');
          return;
       }
    }
-
+   
+   document.getElementById('bucketImg').setAttribute('src','img/bucketDrop.png');
    document.getElementById('totalWater').innerText = waterValue;
+
 }
