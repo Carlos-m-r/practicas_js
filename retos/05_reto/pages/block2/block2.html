@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="block2.js"></script>
+</head>
+<body>
+<h1>Bloque 2</h1>
+
+<div class="card">
+  <h2>1. Cálculo precio entrada cine</h2>
+  <!--
+  <label for="labelBaseTarif">¿Cuál es la tarifa base?</label>
+  <input type="number" id="inputBaseTarif" />
+  -->
+  <label for="labelAge">¿Cuál es la edad del usuario?</label>
+  <input type="number" id="inputAge" />
+  <button type="button" onclick="calculateCinemaTarif()">Calcular Tarifa</button>
+  <p id="resultTarif"></p>
+</div>
+
+<div class="card">
+  <h2>2. Cálculo IMC v2</h2>
+  <label for="heightLabel">Indique altura</label>
+  <input type="number" id="height" />
+  <label for="weightLabel">Indique peso</label>
+  <input type="number" id="weight" />
+  <button type="button" onclick="calculateIMC()">Validar</button>
+  <p id="resultIMC"></p>
+</div>
+
+<div class="card">
+  <h2>3. Juego adivinanza</h2>
+  <button type="button" onclick="loadPassword()">Comenzar Juego</button>
+  <p id="passwordText"></p>
+  <p id="passwordAns" hidden></p>
+  <label for="labelResponse">Introduzca la respuesta:</label>
+  <input type="text" id="inputResponse" />
+  <button type="button" onclick="checkPassword()">Comprobar</button>
+  <p id="resultPassword"></p>
+</div>
+
+<!--
+<div class="card">
+</div>
+
+<div class="card">
+
+</div>
+-->
+
+</body>
+</html>

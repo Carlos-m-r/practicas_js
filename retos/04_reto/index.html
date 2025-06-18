@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ejercicios Matemáticos</title>
+</head>
+<body>
+    <main>
+        <h1>Reto 04</h1>
+
+        <div class="card">
+            <h2>1. ¿Positivo o Negativo?</h2>
+            <label for="inputNumber">Introduzca un número:</label>
+            <input type="number" id="inputNumber">
+            <button type="button" onclick="calculatePositiveNegative()">Comprobar</button>
+            <p id="resultResponse"></p>
+        </div>
+
+
+        <div class="card">
+            <h2>2. ¿Qué fruta?</h2>
+            <label for="celsius">Introduzca un número del 1 al 3:</label>
+            <input type="number" id="fruitNumber">
+            <button type="button" onclick="whichFruit()">Comprobar</button>
+            <p id="resultFruit"></p>
+        </div>
+
+
+        <div class="card">
+            <h2>3. Suma de valores</h2>
+            <label for="sumValue">Elija un número positivo:</label>
+            <input type="number" id="sumValue">
+            <button type="button" onclick="calculateSum()">Calcular</button>
+            <p id="resultSum"></p>
+        </div>
+
+        
+        <div class="card">
+            <h2>4. Cuenta atrás</h2>
+            <label for="countdownInput">Elija un número positivo:</label>
+            <input type="number" id="countdownInput">
+            <button type="button" onclick="showCountdown()">Calcular</button>
+            <p id="resultCountdown"></p>
+        </div>
+
+
+        <div class="card">
+            <h2>5. Hola Game</h2>
+            <button type="button" onclick="holaGame()">Iniciar</button>
+            <p id="resultHolaGame"></p>
+        </div>
+    </main>
+</body>
+</html>

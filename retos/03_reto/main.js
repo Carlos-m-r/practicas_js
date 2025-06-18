@@ -77,7 +77,7 @@ function calculateDivisibilidad() {
     const dividendo = Number(document.getElementById('dividendo').value);
     const divisor = Number(document.getElementById('divisor').value);
 
-    let result =  Number(dividendo % divisor) == 0 ? 'divisible' : 'no divisible'
+    let result =  Number(dividendo % divisor) === 0 ? 'divisible' : 'no divisible';
 
     document.getElementById('resultDivisible').innerText = result;
 }
