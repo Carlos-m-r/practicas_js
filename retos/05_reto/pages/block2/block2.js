@@ -57,6 +57,7 @@ function calculateIMC() {
     }
     document.getElementById('resultIMC').innerText = 'El IMC es: ' + result + ' estaría dentro de la categoria: ' + category;
 }
+
 //3. Adivinanza.
 function loadPassword() {
     const passwords = [
@@ -89,7 +90,39 @@ function checkPassword() {
     
 }
 
-//4. Solicita palabras hasta que el usuario deje de escribir (prompt hasta “cancelar”).
+//4. Convierte un importe en euros a USD, GBP o JPY según opción.
+async function currencyConverter() {
+    const api = "https://api.exchangerate-api.com/v4/latest/EUR";
+    let currencies = [
+                        {currency:'USD',symbol:'$'},
+                        {currency:'GBP',symbol:'£'},
+                        {currency:'JPY',symbol:'¥'}
+                    ];
+    
+    const euro = Number(document.getElementById('euroAmountInput').value);
 
+    const selectedCurrency = document.getElementById('currencySelector').value;
+    let selectedSymbol = '';
 
-//5. Convierte un importe en euros a USD, GBP o JPY según opción.
+    currencies.forEach(element => {
+        if(element.currency == selectedCurrency){
+            selectedSymbol = element.symbol;
+        }
+    });
+
+    
+    try {
+        const response = await fetch(api);
+        const data = await response.json();
+        const currentCurrency = data.rates[selectedCurrency]; // Queremos saber cuánto vale X euros en la moneda seleccionada;
+
+        // El usuario ingresa EUR y queremos saber cuántos de la divisa seleccionada son:
+        const result = (euro * currentCurrency).toFixed(2);
+
+        document.getElementById('resultConversion').innerText = result + selectedSymbol;
+    } catch (error) {
+        console.error("Error al obtener tasas de cambio:", error);
+        document.getElementById('resultConversion').innerText = "Error al convertir.";
+    }
+
+}
