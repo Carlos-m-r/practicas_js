@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src="block4.js"></script>
+    <script src="block4.js" defer></script>
 </head>
 <body>
 <h1>Bloque 4</h1>
@@ -8,13 +8,33 @@
 <div class="card">
   <h2>1. Añadir Agua</h2>
   <label for="labelWater">Contador de agua</label>
-  <button type="button" onclick="addWater()">Añadir agua<img src="img/bucket.png" id="bucketImg" width="35px" height="35px"></button>
+  <button type="button" onclick="addWater()">Añadir agua<img src="assets/img/bucket.png" id="bucketImg" width="35px" height="35px"></button>
   <p>Total agua:&nbsp;<span id="totalWater">0</span><span id="quantitySymbol">ml</span></p>
 </div>
 
+<div class="card">
+  <h2>2. Lista dinámica con eliminación</h2>
+  <label for="labelItem">Artículo: </label>
+  <input for="inputItem" id="inputItem"></input>
+  <button type="button" onclick="addItem()">Añadir Artículo</button>
+  <p id="itemsList"></p>
+</div>
 
+<div class="card">
+  <h2>3. Timer</h2>
+  <label for="labelSeconds">Segundos: </label>
+  <input for="inputSeconds" id="inputSeconds"></input>
+  <p id="timeCount"></p>
+  <button type="button" onclick="initTimer()">Iniciar</button>
+</div>
 
-
+<div class="card">
+  <h2>4. Cuenta atrás</h2>
+  <label for="labelSeconds">Segundos: </label>
+  <input for="inputSecondsCountdown" id="inputSecondsCountdown"></input>
+  <p id="timeCountdown"></p>
+  <button type="button" onclick="initCountdown()">Iniciar</button>
+</div>
 
 </body>
 </html>

@@ -109,7 +109,6 @@ async function currencyConverter() {
             selectedSymbol = element.symbol;
         }
     });
-
     
     try {
         const response = await fetch(api);

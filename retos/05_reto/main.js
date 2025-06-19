@@ -30,6 +30,3 @@ function loadblock() {
             container.innerHTML = `<p>Error: ${error.message}</p>`;
         });
 }
-
-
-
