@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Portfolio Javascript</title>
+    </head>
+    <body>
+        <header class="header-menu">
+            <h1>Proyectos Javascript</h1>
+            <nav id="filter">
+                <button data-cat="all" class="active">Todos</button>
+                <button data-cat="reto01">Ejercicios Matemáticos Interactivos</button>
+                <button data-cat="reto02">Ejercicios Variados</button>
+                <button data-cat="reto03">Varios con selector por Bloque</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="gallery">
+                <article class="card" id="cardArt" data-cat="reto01">
+                    <img src="assets/splash/reto1.png" alt="reto1"
+                        class="cardImage">
+                    <h3>Ejercicios Matemáticos</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(1)">Ver</button>
+                    </div>
+                </article>
+                <article class="card" id="cardArt" data-cat="reto01">
+                    <img src="assets/splash/reto2.png" alt="reto2"
+                        class="cardImage">
+                    <h3>Ejercicios Matemáticos 2</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(2)">Ver</button>
+                    </div>
+                </article>
+                <article class="card" id="cardArt" data-cat="reto01">
+                    <img src="assets/splash/reto3.png" alt="reto3"
+                        class="cardImage">
+                    <h3>Ejercicios Matemáticos 3</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(3)">Ver</button>
+                    </div>
+                </article>
+                <article class="card" id="cardArt" data-cat="reto02">
+                    <img src="assets/splash/reto4.png" alt="reto4"
+                        class="cardImage">
+                    <h3>Ejercicios Variados 1</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(4)">Ver</button>
+                    </div>
+                </article>
+                <article class="card" id="cardArt" data-cat="reto02">
+                    <img src="assets/splash/reto6.png" alt="reto6"
+                        class="cardImage">
+                    <h3>Ejercicios Variados 2</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(6)">Ver</button>
+                    </div>
+                </article>
+                <article class="card" id="cardArt" data-cat="reto03">
+                    <img src="assets/splash/reto5.png" alt="reto5"
+                        class="cardImage">
+                    <h3>Varios con Selector interno</h3>
+                    <div class="links">
+                        <a href>Código</a>
+                        <button onclick="loadContent(5)">Ver</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <section id="mainContent"></section>
+
+        <footer><p>&copy;CMR - 2025</p></footer>
+
+    </body>
+</html>

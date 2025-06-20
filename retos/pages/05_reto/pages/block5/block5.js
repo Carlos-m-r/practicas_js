@@ -20,15 +20,17 @@ document.getElementById('inputText').addEventListener('input', function () {
 
 function showTime() {
     const timeNow = new Date().toLocaleTimeString();
-    document.getElementById('clock').textContent = timeNow;
+    const clock = document.getElementById('clock');
+    if (clock) {
+        clock.textContent = timeNow;
+    }
 }
 
 setInterval(showTime, 1000);
 
 
 function addClick() {
-    const img = document.getElementsByClassName('clicker');
-    console.log(img);
+    const img = document.getElementsByClassName('clicker')[0];
 
     // Cambiamos imagen
     if (img.getAttribute('src') === 'assets/img/bucket.png') {
@@ -40,7 +42,5 @@ function addClick() {
     // Incrementamos el contador de clics
     const total = document.getElementById('totalClicks');
     total.textContent = Number(total.textContent) + 1;
-
-
     
 }

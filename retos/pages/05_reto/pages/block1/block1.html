@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script src="block1.js"></script>
+  </head>
+  <body>
+    <h1>Bloque 1</h1>
+    <section class="gallery">
+
+      <div class="card">
+        <h2>1. Cálculo precio taxi</h2>
+        <label for="labelBaseTarif">¿Cuál es la tarifa base?</label>
+        <input type="number" id="inputBaseTarif" />
+        <label for="labelKmPrice">¿Cuál es el precio por km?</label>
+        <input type="number" id="inputKmPrice" />
+        <label for="labelTraveledKm">¿Km recorridos?</label>
+        <input type="number" id="inputTraveledKm" />
+        <button type="button" onclick="calculateTarif()">Calcular
+          Tarifa</button>
+        <p id="resultTarif"></p>
+      </div>
+
+      <div class="card">
+        <h2>2. Cálculo IMC v2</h2>
+        <label for="heightLabel">Indique altura</label>
+        <input type="number" id="height" />
+        <label for="weightLabel">Indique peso</label>
+        <input type="number" id="weight" />
+        <button type="button" onclick="calculateIMC()">Validar</button>
+        <p id="resultIMC"></p>
+      </div>
+
+      <div class="card">
+        <h2>3. Validación e-mail</h2>
+        <label for="labelMail">introduzca un email:</label>
+        <input type="text" id="inputMail" />
+        <button type="button" onclick="validateMail()">Validar</button>
+        <p id="resultValidation"></p>
+      </div>
+
+      <div class="card">
+        <h2>4. Fibonacci</h2>
+        <label for="fiboLabel">Indique una longitud:</label>
+        <input type="number" id="fiboInput" />
+        <button type="button" onclick="fibonacci()">Mostrar</button>
+        <p id="resultFibo"></p>
+      </div>
+
+      <div class="card">
+        <h2>5. Mensaje múltiple</h2>
+        <label for="messageLabel">Indique un texto:</label>
+        <input type="text" id="messageInput" />
+        <label for="timesLabel">Indique número de repeticiones:</label>
+        <input type="number" id="timesInput" />
+        <button type="button" onclick="messageMult()">Iniciar</button>
+        <p id="resultMessage"></p>
+      </div>
+    </section>
+  </body>
+</html>

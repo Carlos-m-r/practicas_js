@@ -104,11 +104,12 @@ async function currencyConverter() {
     const selectedCurrency = document.getElementById('currencySelector').value;
     let selectedSymbol = '';
 
-    currencies.forEach(element => {
-        if(element.currency == selectedCurrency){
+    for (const element of currencies) {
+         if(element.currency == selectedCurrency){
             selectedSymbol = element.symbol;
+            break;
         }
-    });
+    }
     
     try {
         const response = await fetch(api);

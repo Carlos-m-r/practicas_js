@@ -10,7 +10,7 @@ function loadblock() {
     if (value === "0") return;
 
     // Cargar HTML
-    fetch(`pages/block${value}/block${value}.html`)
+    fetch(`pages/05_reto/pages/block${value}/block${value}.html`)
         .then(response => {
             if (!response.ok) {
                 throw new Error("No se pudo cargar el bloque.");
@@ -22,7 +22,7 @@ function loadblock() {
 
             // Cargar JS dinámicamente
             const script = document.createElement("script");
-            script.src = `pages/block${value}/block${value}.js`;
+            script.src = `pages/05_reto/pages/block${value}/block${value}.js`;
             script.type = "text/javascript";
             document.body.append(script);
         })

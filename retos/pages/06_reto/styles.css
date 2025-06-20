@@ -21,6 +21,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
+
 .card {
   background-color: #fff;
   padding: 1.5rem;
@@ -43,7 +44,7 @@ label {
   font-weight: bold;
 }
 
-input[type="number"] {
+input {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
